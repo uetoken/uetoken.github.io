@@ -1,0 +1,10 @@
+{
+    "version": "0.1.0",
+    "command": "powershell",
+    "options": {
+        "cwd": "C:\\Users\\uetokenceo\\Source\\bootstrap"
+    },
+    "isShellCommand": true,
+    "args": ["-command", "grunt dist ; cp .\\dist\\css\\bootstrap.min.css ..\\uetoken.github.io\\bootstrap-uetoken.css ; cp .\\dist\\js\\bootstrap.min.js ..\\uetoken.github.io\\bootstrap-uetoken.js"],
+    "showOutput": "always"
+}
