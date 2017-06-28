@@ -184,6 +184,11 @@
     <section class="contributing py-4 bg-white">
         <div class="container">
             <h2 class="mb-4">How to contribute</h2>
+            <div class="alert alert-warning text-center" role="alert">
+                <strong>Thanks to some bug-finding by the Ethereum community, a new contract has been deployed.</strong><br />
+                If you're getting ready to contribute, make sure to use the contract address specified below.<br />
+                <small>Previous versions of the token contract <em>will not</em> be enabled, so any Ether transfers to them will be rejected.</small>
+            </div>
             <div class="row">
                 <div class="col-lg-6 text-center">
                     <p class="lead">The crowdsale begins on:</p>
@@ -205,11 +210,11 @@
                                 contract. Make sure you provide enough gas for the transaction&mdash;100,000 or so ought to do it.
                             </p>
                             <p class="card-text text-white text-center" style="word-break: break-all;"><small><strong>
-                                0xbe5c1c298d0088886146a906cdfd83539a8cc0ad
+                                0x27f706edde3aD952EF647Dd67E24e38CD0803DD6
                             </strong></small></p>
                             <div class="text-center">
-                                View on <a class="text-white" href="https://etherscan.io/address/0xbe5c1c298d0088886146a906cdfd83539a8cc0ad" target="_blank">Etherscan</a>
-                                or <a class="text-white" href="https://etherchain.org/account/0xbe5c1c298d0088886146a906cdfd83539a8cc0ad" target="_blank">etherchain</a>
+                                View on <a class="text-white" href="https://etherscan.io/address/0x27f706edde3aD952EF647Dd67E24e38CD0803DD6" target="_blank">Etherscan</a>
+                                or <a class="text-white" href="https://etherchain.org/account/0x27f706edde3aD952EF647Dd67E24e38CD0803DD6" target="_blank">etherchain</a>
                             </div>
                         </div>
                     </div>
@@ -229,8 +234,9 @@
                     </p>
                     <p>
                         The base token distribution formula is very simple: for every <strong>1 ETH</strong> you
-                        contribute, you'll receive <strong>100 UET</strong>, plus an additional <strong>1 UET</strong>
-                        for every Ether that's been contributed in total. Like this:
+                        contribute, you'll receive <strong>100 UET</strong>, and if you contribute at least
+                        <strong>0.01 ETH</strong>, you'll also receive an additional <strong>1 UET</strong> for every
+                        Ether that's been contributed in total. Like this:
                     </p>
                     <table class="table">
                         <thead>
@@ -244,21 +250,27 @@
                         <tbody>
                             <tr>
                                 <td>#1</td>
-                                <td class="text-right">1&nbsp;<small>ETH</small></td>
-                                <td class="text-right">1&nbsp;<small>ETH</small></td>
-                                <td class="text-right">101&nbsp;<small>UET</small></td>
+                                <td class="text-right">1.000&nbsp;<small>ETH</small></td>
+                                <td class="text-right">1.000&nbsp;<small>ETH</small></td>
+                                <td class="text-right">101.000&nbsp;<small>UET</small></td>
                             </tr>
                             <tr>
                                 <td>#2</td>
-                                <td class="text-right">3&nbsp;<small>ETH</small></td>
-                                <td class="text-right">4&nbsp;<small>ETH</small></td>
-                                <td class="text-right">304&nbsp;<small>UET</small></td>
+                                <td class="text-right">3.000&nbsp;<small>ETH</small></td>
+                                <td class="text-right">4.000&nbsp;<small>ETH</small></td>
+                                <td class="text-right">304.000&nbsp;<small>UET</small></td>
                             </tr>
                             <tr>
                                 <td>#3</td>
-                                <td class="text-right">0.5&nbsp;<small>ETH</small></td>
-                                <td class="text-right">4.5&nbsp;<small>ETH</small></td>
-                                <td class="text-right">54.5&nbsp;<small>UET</small></td>
+                                <td class="text-right">0.005&nbsp;<small>ETH</small></td>
+                                <td class="text-right">4.005&nbsp;<small>ETH</small></td>
+                                <td class="text-right">0.500&nbsp;<small>UET</small></td>
+                            </tr>
+                            <tr>
+                                <td>#4</td>
+                                <td class="text-right">0.500&nbsp;<small>ETH</small></td>
+                                <td class="text-right">4.505&nbsp;<small>ETH</small></td>
+                                <td class="text-right">54.505&nbsp;<small>UET</small></td>
                             </tr>
                         </tbody>
                     </table>
@@ -275,10 +287,10 @@
                         hash and uses that number as a bonus multiplier.
                     </p>
                     <p>
-                        Every UET purchase during the bonus block will receive, in addition to the base distribution,
-                        an <strong>additional 100 UET</strong> per Ether multiplied by the bonus multiplier.
-                        That means that contributor have a chance of receiving a total of <em>nine times</em> the
-                        number of tokens they expected!
+                        Every UET purchase of at least <strong>0.01 ETH</strong> worth during the bonus block will receive, in
+                        addition to the base distribution, an <strong>additional 100 UET</strong> per Ether multiplied
+                        by the bonus multiplier. That means that contributors have a chance of receiving a total of
+                        <em>nine times</em> the number of tokens they expected!
                     </p>
                 </div>
             </div>
