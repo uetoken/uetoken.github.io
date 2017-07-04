@@ -8,16 +8,16 @@ function decodeStats(response, price) {
 
     var weiPerEther = new BigNumber("1000000000000000000", 10);
 
-    var totalContributionExact = new BigNumber(result.substr(0, 64), 16).div(weiPerEther);
+    var totalContributionExact = new BigNumber(result.substr(2, 64), 16).div(weiPerEther);
     var totalContributionUSDExact = totalContributionExact.times(new BigNumber(price));
 
     return {
         totalContribution: totalContributionExact.round(3, BigNumber.ROUND_DOWN),
         totalContributionUSD: totalContributionUSDExact.round(0, BigNumber.ROUND_DOWN),
         totalContributionTVs: totalContributionUSDExact.div(new BigNumber("1200")).round(0, BigNumber.ROUND_DOWN),
-        totalSupply: new BigNumber(result.substr(64, 64), 16).div(weiPerEther).round(3, BigNumber.ROUND_DOWN),
-        totalBonusTokensIssued: new BigNumber(result.substr(128, 64), 16).div(weiPerEther).round(3, BigNumber.ROUND_DOWN),
-        purchasingAllowed: new BigNumber(result.substr(192, 64), 16).isZero() == false
+        totalSupply: new BigNumber(result.substr(66, 64), 16).div(weiPerEther).round(3, BigNumber.ROUND_DOWN),
+        totalBonusTokensIssued: new BigNumber(result.substr(130, 64), 16).div(weiPerEther).round(3, BigNumber.ROUND_DOWN),
+        purchasingAllowed: new BigNumber(result.substr(194, 64), 16).isZero() == false
     };
 }
 
