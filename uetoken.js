@@ -58,7 +58,7 @@ function updatePage(stats) {
     }
 
     $("#total-usd").text("$" + stats.totalContributionUSD.toFixed(0));
-    if (stats.totalContributionTVs.toNumber() <= 0) {
+    if (stats.totalContributionUSD.toNumber() <= 0) {
         $("#total-usd-message").text("No Ether yet, so no cash either.");
     } else if (stats.totalContributionTVs.toNumber() < 1) {
         $("#total-usd-message").text("Not enough to buy a television yet.");
