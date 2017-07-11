@@ -45,10 +45,7 @@ function getPrice() {
 
 function updatePage(stats) {
     if (stats == null) return;
-    if (!stats.purchasingAllowed/* && Date.now < Date.UTC(2017, 6, 4, 14)*/) {
-        $("#stats").hide();
-        return;
-    }
+
 
     $("#total-ether").text(stats.totalContribution.toFixed(3));
     if (stats.totalContribution.toNumber() <= 0) {
